@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lumen Elements preview</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <header><h1>Lumen Elements</h1></header>
+      <div class="workspace">
+        <form>
+          <label
+            >Element
+            <select id="element"></select
+          ></label>
+          <label
+            >Frame
+            <select id="ratio">
+              <option value="landscape">Landscape (16:9)</option>
+              <option value="portrait">Portrait (9:16)</option>
+            </select>
+          </label>
+          <label id="text-row"><span id="text-label">Text</span><textarea id="text" rows="3"></textarea></label>
+          <label>Accent <input id="accent" type="color" value="#ffffff" /></label>
+          <button type="reset">Reset settings</button>
+        </form>
+        <section aria-label="Animated preview" class="preview">
+          <div class="frame"><canvas id="preview" width="768" height="432">Animated Element preview</canvas></div>
+          <div class="transport">
+            <button id="play" type="button">Play</button>
+            <label>Time <input id="time" type="range" min="0" step="0.01" /></label>
+            <output id="position" for="time"></output>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/preview.js"></script>
+  </body>
+</html>
